@@ -1,0 +1,294 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: rgb(29, 32, 43);
+  overflow: hidden;
+}
+
+iframe {
+  border: 0;
+  width: 100%;
+  height: 300px;
+}
+
+:root {
+  font-family: system-ui;
+}
+
+* {
+  margin: 0;
+}
+
+#logo{
+  height: 50%;
+}
+
+#foreground {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.7s;
+}
+
+#mail {
+  position: absolute;
+  border-radius: 10px;
+  width: 800px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  background-color: white;
+  cursor: pointer;
+  transform-origin: center;
+  /* user-select: none; */
+  touch-action: none;
+}
+
+#avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #cccccc;
+  font-size: 20px;
+  margin: 20px 16px;
+  flex: none;
+}
+
+.email-layout {
+  display: flex;
+}
+
+.email-content {
+  width: 100%;
+}
+
+#object {
+  padding-top: 20px;
+  padding-left: 72px;
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: #1f1f1f;
+}
+
+.email-header {
+  padding-top: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#content {
+  margin-top: 8px;
+  font-size: 0.875rem;
+}
+
+.grey-text {
+  color: #5e5e5e;
+  font-size: 0.75rem;
+}
+
+.grey-text.to {
+  vertical-align: top;
+}
+
+.icon-button {
+  margin-left: 20px;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.background svg {
+  color: #aaaaaa;
+  height: 70%;
+}
+
+#details-button {
+  margin-left: 4px;
+  padding: 0;
+  border-radius: 4px;
+}
+
+#details-button:hover {
+  background-color: #2021240f;
+}
+
+#details-button:hover + #dialog-info,
+#dialog-info:hover {
+  visibility: visible;
+}
+
+#dialog-info {
+  visibility: hidden;
+  top: 100%;
+  left: 12px;
+  background-color: white;
+  max-height: 360px;
+  max-width: 100%;
+  min-width: 360px;
+  overflow: auto;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 2px 4px #00000033;
+  border: 1px solid #00000033;
+  font-size: 0.875rem;
+  padding: 13px 21px 17px 21px;
+}
+
+#dialog-info tr td:first-child {
+  text-align: right;
+  color: #999;
+  padding: 2px 16px 2px 0;
+}
+
+#start-screen {
+  position: fixed;
+  background-color: #570b69;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 40px;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+
+.button {
+  border: solid 2px #5e5e5e;
+  border-radius: 40px;
+  padding: 10px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.button:hover {
+  background-color: #84b9eb;
+  transform: scale(1.1);
+}
+
+dialog {
+  margin: auto;
+  border-radius: 10px;
+  border: solid 1px black;
+}
+
+dialog::backdrop {
+  background-color: #00000069;
+}
+
+.game-title {
+  font-size: 50px;
+  color: #ffd900;
+}
+
+.game-desc {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+#warning,
+#bad-link {
+  text-align: center;
+  padding: 30px;
+}
+
+#warning h2 {
+  color: #ff4d20;
+  margin-bottom: 20px;
+}
+
+#bad-link h2 {
+  color: red;
+  margin-bottom: 20px;
+}
+
+#trick-dialog {
+  min-width: 60%;
+  text-align: center;
+  padding: 30px;
+}
+
+#trick-dialog svg {
+  width: 100px;
+  height: 100px;
+}
+
+#explanation {
+  padding: 30px;
+  font-size: 17px;
+}
+
+#encouraging-text {
+  padding: 0 20px 20px;
+}
+
+#end-screen {
+  position: fixed;
+  background-color: #0d3c94;
+  inset: 0;
+  display: none;
+  opacity: 0;
+  transform: scale(1.4);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  gap: 40px;
+  transition-duration: 0.3s;
+  text-align: center;
+}
+
+#mute {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 40px;
+  padding: 0;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 100%;
+  border: none;
+  transition-duration: 0.4s;
+}
+
+#mute:hover {
+  background-color: #00000022;
+}
+
+#mute svg {
+  top: 10px;
+  left: 8.75px;
+  height: 20px;
+  transition-duration: 0.3s;
+  position: absolute;
+}
+
+#mute:not(.muted) svg:nth-child(2) {
+  opacity: 0;
+}
+
+#mute.muted svg:nth-child(1) {
+  opacity: 0;
+}
