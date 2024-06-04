@@ -111,6 +111,7 @@ iframe {
 }
 
 .background {
+  background: linear-gradient(90deg, #ff0000 45%, #d1baf6, #01cc01 55%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -118,7 +119,7 @@ iframe {
 }
 
 .background svg {
-  color: #aaaaaa;
+  color: #ffffffa8;
   height: 70%;
 }
 
